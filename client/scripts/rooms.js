@@ -9,6 +9,11 @@ var Rooms = {
     }
     RoomsView.renderRoom(roomName);
 
+    if (!Rooms.name.hasOwnProperty(roomName)) {
+      $('select').append(`<option id = "${roomName}" value=${roomName}>${roomName}</option>`);
+    }
+
+
   }
 
 };

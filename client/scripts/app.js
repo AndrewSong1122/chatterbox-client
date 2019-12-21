@@ -5,6 +5,7 @@ var App = {
   username: 'anonymous',
   room: 'Lobby',
 
+
   initialize: function() {
     App.username = window.location.search.substr(10);
 
@@ -12,9 +13,16 @@ var App = {
     RoomsView.initialize();
     MessagesView.initialize();
 
+
+
     // Fetch initial batch of messages
     App.startSpinner();
     App.fetch(App.stopSpinner);
+
+    setInterval(() => {
+      App.fetch();
+      RoomsView.renderRoom(App.room);
+    }, 100);
 
   },
 
@@ -27,6 +35,8 @@ var App = {
 
       callback();
     });
+
+
   },
 
   startSpinner: function() {

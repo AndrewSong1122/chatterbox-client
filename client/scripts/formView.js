@@ -19,9 +19,11 @@ var FormView = {
 
     Parse.create(msg);
 
+    // RoomsView.renderRoom(App.room);
 
-    console.log('click!');
+    console.log($('#message').val());
     $('#message').val('');
+
   },
 
   setStatus: function(active) {
