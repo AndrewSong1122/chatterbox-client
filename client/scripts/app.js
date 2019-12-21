@@ -21,6 +21,8 @@ var App = {
     Parse.readAll((data) => {
       // examine the response from the server request:
       console.log(data);
+      //push to Messages
+      Messages.posts = (data.results);
 
       callback();
     });
