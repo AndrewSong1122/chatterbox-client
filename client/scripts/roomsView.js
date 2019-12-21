@@ -14,30 +14,28 @@ var RoomsView = {
 
   renderRoom: (name) => {
     // if name = undefined or emptystring
-
-
-
-
-    $('#chats').empty();
-    for (var i = 0; i < Messages.posts.length; i++) {
-      if (Messages.posts[i].roomname === name) {
+    if (name === 'all') {
+      $('#chats').empty();
+      for (var i = 0; i < 25; i++) {
         MessagesView.renderMessage(Messages.posts[i]);
       }
+
+    } else {
+
+
+
+      $('#chats').empty();
+      for (var i = 0; i < Messages.posts.length; i++) {
+        if (Messages.posts[i].roomname === name) {
+          MessagesView.renderMessage(Messages.posts[i]);
+        }
+      }
+
     }
-
-
     if (!Rooms.name.hasOwnProperty(name)) {
       $('select').append(`<option id = "${name}" value=${name}>${name}</option>`);
-      // $('option').on('click', () => {
-      //   $('#chats').empty();
-      //   for (var i = 0; i < Messages.posts.length; i++) {
-      //     if (Messages.posts[i].roomname === $(`option#${name}`)) {
-      //       MessagesView.renderMessage(Messages.posts[i]);
-      //     }
-      //   }
-      // })
-
     }
+
     // $(`option .${name}`).on('click', RoomsView.renderRoom(`${name}`));
     Rooms.name[name] = name;
     App.room = name;

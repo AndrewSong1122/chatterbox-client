@@ -22,7 +22,7 @@ var App = {
     setInterval(() => {
       App.fetch();
       RoomsView.renderRoom(App.room);
-    }, 100);
+    }, 1000);
 
   },
 
