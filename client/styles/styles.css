@@ -1,5 +1,5 @@
 body {
-    background: #eee;
+    background-image: url(https://media3.giphy.com/media/27TR7u05zxnBC/giphy.gif);
     text-align: center;
     padding: 0 25px;
     font-family: arial, sans-serif;
@@ -9,10 +9,15 @@ body {
     width: 500px;
     margin: auto;
     text-align: left;
-    background: white;
+    background: lightblue;
     padding: 50px 60px;
     border: solid #ddd;
     border-width: 0 1px 1px 1px;
+}
+
+#main {
+    background-image: url(https://i.kym-cdn.com/entries/icons/original/000/028/223/hmlspst6qjo11.jpg);
+    background-size: cover;
 }
 
 #main h1 {
@@ -20,6 +25,9 @@ body {
     font-size: 35px;
     margin-bottom: 5px;
     padding: 5px;
+    color: white;
+    letter-spacing: 10px;
+    margin-top: 70px;
 }
 
 #main h1 span {
@@ -57,12 +65,22 @@ form input[type=text] {
     width: 70%;
     font-size: 12px;
     padding: 5px;
+    border-radius: 10px
+}
+
+#chats {
+    background-image: url(https://media.giphy.com/media/iThaM3NlpjH0Y/giphy.gif);
+    background-size: cover;
 }
 
 .chat {
     padding: 5px;
     margin-bottom: 5px;
-    background-color: #eee;
+    background-color: lightcyan;
+    border: 2px solid black;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: inset 0 0 5px rgb(53, 53, 53);
 }
 
 .chat .username {
