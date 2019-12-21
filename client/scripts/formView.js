@@ -14,7 +14,7 @@ var FormView = {
     var msg = {
       username: App.username,
       text: msgText,
-      roomname: 'random'
+      roomname: App.room
     };
 
     Parse.create(msg);
